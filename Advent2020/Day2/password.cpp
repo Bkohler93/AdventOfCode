@@ -41,7 +41,8 @@ bool Password::test_two() {
     std::cout << pw[num_one - 1] << "\t" << pw[num_two - 1] << std::endl;
 
     //index num_one - 1 must be letter, num_two - 1 must not be letter
-   if (pw[num_one - 1] != letter) return false;
-   else if (pw[num_two - 1] == letter) return false;
-   else return true; 
+    if (pw[num_one - 1] == letter && pw[num_two - 1] != letter) return true;
+    else if (pw[num_one - 1] != letter && pw[num_two - 1] == letter) return true;
+
+    else return false;
 }
