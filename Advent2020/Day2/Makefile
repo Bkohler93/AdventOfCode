@@ -1,4 +1,4 @@
-CC = g++ -v -std=c++11
+CC = gcc -v -std=c++11
 exe_file = run
 
 $(exe_file): main.o password.o
