@@ -1,31 +1,19 @@
 ## About
-This is my solution to the Advent of Code 2020 Day 3 Challenege. This problem asks me to parse text containing all periods '.' and pound signs '#'.
-The input is shaped as as grid, and is asking how many '#' I will land on if I start at the top-left '.' and move across the grid with a given slope.
-The full problem statement can be found at [AdventOfCode](https://adventofcode.com/2020/day/3), and the full input can be found in "inputs.txt". 
-The input is one large column of periods and pound signs, and when the current position is going to move too far to the right, it wraps
-back to the start of the column and continues to move from there. An example of the grid is down below:
+This is my solution to the Advent of Code 2020 Day 2 Challenge. In this problem I had to check how many passwords are valid from a large (1000 lines) input. There are two parts to this problem, and each part follows different rules for how to check if a password is valid. All passwords are in lower case and only contain letters. An example line from the input file is shown below, as well as the rules to checking if a password is valid:
 
-..#..#....#.
-.#.....#....
-#...#..#..#.
-..#..#...#..
-.#.#....#...
+"1-13 r: gqdrspndr"
 
-### Part One Rules:
-1. Use a slope of right 3, down 1
-2. Return the number of '#' hit
+### PART ONE RULES:
+The first characters represent a range of numbers to which the following letter will appear in a password. In the example above the password will be valid if there are [1,13] r's.
 
-### Part Two Rules:
-1. Do the same as Part One except with slopes of...
-    a. right 1, down 1
-    b. right 3, down 1.
-    c. right 5, down 1.
-    d. right 5, down 1.
-    e. right 1, down 2.
-2. Return the product of each of the slopes' number of '#' landed on.
+### PART TWO RULES:
+The first characters represent indices. The first index will be where the following letter must be found, and the second index will be where the following letter must not be found. The problem states that these numbers are literal, meaning '1' is the first index of a string. In the example above string[0] must contain 'r' and string[12] must not contain an 'r'
+
+## How to run
+Use 'make' to compile and create an executable if you have the correct tools. 
+Otherwise use a cpp compiler as such: '[g++] *.cpp -o run'.
+
+Use ./run to execute the program.
 
 
-### Thought Process:
-- parse text from file, store into vector of strings in Grid class
-- count number of hits using different slopes given
-    - when cursor is going to reach end of a string, move y up 1 unit, x over (x-slope - length - currIndex)
+Entire problem statement can be found at [AdventOfCode](https://adventofcode.com/2020/day/2).
