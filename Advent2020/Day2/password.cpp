@@ -30,10 +30,10 @@ void Password::print_data() {
 
 bool Password::test_one() {
 
-    int count = std::count(pw.begin(), pw.end(), letter);   //num occurences of letter
+    int counts = count(pw.begin(), pw.end(), letter);   //num occurences of letter
 
     //check if count is less than num_one or greater than num_two
-    return (count >= num_one && count <= num_two) ? true : false;
+    return (counts >= num_one && counts <= num_two) ? true : false;
 }
 
 
