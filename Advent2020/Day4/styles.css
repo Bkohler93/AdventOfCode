@@ -1,0 +1,75 @@
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #eee;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problem-description {
+    max-width: 500px;
+}
+
+.field-list {
+    align-self:flex-start;
+    margin-left: 132px;
+    border-left: 2px solid black;
+}
+
+.problem-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-bottom: 100px;
+}
+
+.input-field {
+    height: 200px;
+    width: 480px;
+}
+
+#input-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+#input-container label {
+    align-self: center;
+}
+
+.input-field {
+    margin-left: 42px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-container label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.answer-container {
+    display: flex;
+}
+
+.answer-button {
+    max-width: 153px;
+    margin-left: 212px;
+}
+
+.answer-printed {
+    max-width: 150px;
+    margin-left: 20px;
+}
